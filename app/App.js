@@ -14,11 +14,41 @@ import Profile from './screens/Profile';
 let screen = Dimensions.get('window');
 
 const TabNavigator = createBottomTabNavigator({
-  Bookcase: Bookcase,
-  AddBook: AddBook,
-  Explore: Explore,
-  Lists: Lists,
-  Profile: Profile
+  Bookcase: {
+    screen: Bookcase,
+    navigationOptions: {
+      tabBarLabel: 'Bookcases',
+      tabBarIcon: ({ tintColor }) => <Icon name="open-book" type="entypo" size={28} color={tintColor} />
+    }
+  },
+  AddBook: {
+    screen: AddBook,
+    navigationOptions: {
+      tabBarLabel: 'Explore',
+      tabBarIcon: ({ tintColor }) => <Icon name="ios-map-outline" type="ionicon" size={28} color={tintColor} />
+    }
+  },
+  Explore: {
+    screen: Explore,
+    navigationOptions: {
+      tabBarLabel: 'Add Book',
+      tabBarIcon: ({ tintColor }) => <Icon name="ios-add-circle-outline" type="ionicon" size={28} color={tintColor} />
+    }
+  },
+  Lists: {
+    screen: Lists,
+    navigationOptions: {
+      tabBarLabel: 'Lists',
+      tabBarIcon: ({ tintColor }) => <Icon name="list" type="entypo" size={28} color={tintColor} />
+    }
+  },
+  Profile: {
+    screen: Profile,
+    navigationOptions: {
+      tabBarLabel: 'Profile',
+      tabBarIcon: ({ tintColor }) => <Icon name="ios-person-outline" type="ionicon" size={28} color={tintColor} />
+    }
+  }
 });
 
 
