@@ -17,7 +17,7 @@ const TabNavigator = createBottomTabNavigator({
   Bookcase: {
     screen: Bookcase,
     navigationOptions: {
-      tabBarLabel: 'Bookcases',
+      tabBarLabel: 'Bookcase',
       tabBarIcon: ({ tintColor }) => <Icon name="open-book" type="entypo" size={28} color={tintColor} />
     }
   },
